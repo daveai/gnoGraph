@@ -40,7 +40,7 @@ def query(swaps):
     data = sg.query_df([
         swaps.timestamp,
         swaps.hash,
-        swaps.__getattr__('from'),
+        swaps.__getattribute__('from'),
         swaps.amountIn,
         swaps.tokenIn.symbol,
         swaps.tokenIn.decimals,
