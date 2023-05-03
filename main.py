@@ -8,7 +8,7 @@ def fetch(endpoint, label):
     # Create a query which fetches all sells involving GNO
     swaps = endpoint.Query.swaps(
         first=20000,
-        where={"tokenIn": "0x6810e776880c02933d47db1b9fc05908e5386b96"},
+        where={"tokenIn": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB".lower()},
         orderBy="timestamp",
         orderDirection="desc",
     )
@@ -20,7 +20,7 @@ def fetch(endpoint, label):
     swaps = univ3.Query.swaps(
         first=20000,
         where={
-            "tokenOut": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+            "tokenOut": "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB".lower(),
         },
         orderBy="timestamp",
         orderDirection="desc",
